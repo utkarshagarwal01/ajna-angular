@@ -43,8 +43,10 @@ app.controller('form_controller', function($http, $scope, $compile) {
 		var parameter = JSON.stringify(conditions);
 
 		url = "localhost";
-
+		console.log(parameter);
 		$http.post(url,parameter);
+
+
 		
 	}
 });
