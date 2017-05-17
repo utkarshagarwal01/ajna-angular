@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/style.css" rel="stylesheet">
+		<link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+		<link href="css/chatbox_style.css" rel="stylesheet">
+    	<script src="js/angular.min.js"></script>
+    	<script src="js/form_app.js"></script>
+	</head>
+	<title>Ajna Chat</title>
+	
+
+	<body class="body" ng-app="form_app">
+
+		
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="http://ajna.biz/" class="navbar-brand"><img src="http://ajna.biz/wp-content/uploads/2017/05/logo4.png" alt="Ajna"></a>
+            </div>
+        </div>
+        <!-- /.container -->
+    </nav><br/><br/><br/><br/>
+    <div class="container" ng-controller="form_controller">
+    	<h1 class="centered yellow" ng-init="$scope.count=0">Dummy Form {{ $scope.count }}</h1><br/><br/><br/>
+    	<form class="form-inline" ng-init="rows = []">
+            <p>
+                <div class="row" ng-repeat="row in rows track by $index">
+                    <div class="col-sm-1"></div>
+                    <div class="col-sm-4"> 
+                      <label class="mr-sm-2 yellow form-label" for="inlineFormInput">Stocks where</label>
+                      <input type="text" class="form-control form-select mb-2 mr-sm-2 mb-sm-0" id="inlineFormInput" placeholder="Indicator">
+                    </div>
+                    <div class="col-sm-3">
+                      <label class="mr-sm-2 yellow form-label" for="inlineFormCustomSelect">is</label>
+                      <select class="form-select custom-select mb-2 mr-sm-2 mb-sm-0" id="inlineFormCustomSelect">
+                        <option selected>Choose...</option>
+                        <option value="1" class="option">></option>
+                        <option value="2">=</option>
+                        <option value="3"><</option>
+                      </select>
+                    </div>
+                    <div class="col-sm-3">
+                      <label class="sr-only yellow form-label" for="inlineFormInput">condition</label>
+                      <input type="text" class="form-control form-select mb-2 mr-sm-2 mb-sm-0" id="inlineFormInput" placeholder="Condition">
+                    </div>
+                    <div class="col-sm-1">
+                        <i class="fa fa-plus yellow fa-2x" aria-hidden="true" ng-show="$index == rows.length - 1" ng-click="rows.push(undefined)"></i>
+                    </div>
+                </div><br/>
+            </p>
+            <div>
+                <button type="submit" class="btn btn-primary form-button">Submit</button>
+            </div>
+        </form>
+    </div>
+    <!-- jQuery -->
+
+    <div ng-repeat="t in getNumber(10)">text</div>
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+
+	</body>
+</html>

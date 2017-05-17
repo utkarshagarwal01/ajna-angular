@@ -1,0 +1,77 @@
+.navbar-brand>img {   
+    display: block;
+    height: 62px;
+    width: 67px;
+    margin-top: -8px;
+}
+
+.navbar{
+    min-height: 76px;
+}
+
+.navbar-inverse {
+    background-color: #fff;
+    border-color: #080808;
+}
+
+.body{
+    background-color: #37474f !important;
+}
+
+.centered{
+    text-align: center;
+}
+
+.yellow{
+    color: #FFD966 !important;
+}
+
+.modal-header {
+    padding: 0px 15px 0px 15px;
+}
+
+.modal_row{
+    background: #FFD966 !important;
+}
+
+.modal-dialog{
+    width: 85%;
+}
+
+.fa{
+    color: #1f8ceb;
+}
+
+.form-select{
+    min-height: 35px;
+    border-radius: 7px;
+    width: 75%;
+    margin-left: 5%;
+}
+
+.form-button{
+    min-width: 20%;
+    margin-top: 25px;
+    border-radius: 30px;
+    margin-left: 8%;
+}
+
+.form-label{
+    font-size: 18px;
+}
+
+input{
+   text-align:center;
+}
+
+select{ 
+    text-align-last:center;
+}
+
+.option{ 
+    text-indent: 5px;
+}
+
+.dynamic{
+    margin-bottom: 10px;
+}

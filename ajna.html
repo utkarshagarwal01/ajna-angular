@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/style.css" rel="stylesheet">
+		<link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+		<link href="css/chatbox_style.css" rel="stylesheet">
+    	<script src="js/angular.min.js"></script>
+    	<script src="js/chat_app.js"></script>	<!-- 
+    	<script src="js/materialize.min.js"></script>								
+		<link href="css/materialize.min.css" rel="stylesheet"> -->			
+	</head>
+	<title>Ajna Chat</title>
+	
+
+	<body class="body">
+
+		
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="http://ajna.biz/" class="navbar-brand"><img src="http://ajna.biz/wp-content/uploads/2017/05/logo4.png" alt="Ajna"></a>
+            </div>
+        </div>
+        <!-- /.container -->
+    </nav>
+    <br/><br/><br/>
+    <!-- Page Content -->
+    <div class="container" ng-app="chat_app">
+    	<br/><br/>
+        <h1 class="centered yellow">Say Hello to Divya!</h1><br/>
+        <h4 class="centered yellow">
+        	Divya is a chatbot designed to help you Buy Low & Sell High :) Divya's up 24/7 watching every asset, every market. She can provide you information, run analyses and make you look smart!
+		</h4>
+        <hr>
+        <div class="row">
+        	<div class="col-sm-1"></div>
+        	<div class="col-sm-10">
+        		
+
+        		<div id="MotorInsuranceModal" role="dialog" ng-controller="motor_insurance_controller">
+        <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">
+                    <div class="row modal_row">
+                        <div class="col-sm-2" style="padding-left:0px; padding-right:0px;">
+                            <img src="img/divya.jpg" alt="" class="modal_img img-responsive">
+                        </div>
+                        <div class="col-sm-9 centered">
+                            <h3> Divya </h3>
+                            <h5>Here to help you Buy Low & Sell High.</h5>
+                        </div>
+                    </div>
+            </h4>
+          </div>
+          <div class="modal-body">
+                <div class="chatbox">
+                    <div class="chatlogs" id="cl_mi">
+                        <div class="chat bot">
+                            <div class="row">
+                                <div class="col-sm-10">
+                                    <p class="chat-message">Hi! I'm Divya:) I'm your new assistant. Pls ask me Qs about Indian IT stocks.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <span ng-repeat="msg in motor_insurance_messages track by $index">
+                        <div ng-if="$even">
+                            <div class="row">
+                                <div class="col-sm-3"></div>
+                                <div>
+                                    <div class="chat self">
+                                        <p class="chat-message" style="margin-left:auto;">{{ msg }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div ng-if="$odd">
+                            <div class="chat bot">
+                                <div class="row">
+                                    <div class="col-sm-10">
+                                        <p class="chat-message">{{ msg }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        </span>
+                    </div>
+                </div>
+
+          <div class="modal-footer">
+              <div class="row">
+                  <div class="col-sm-12">
+                    <form ng-submit="ask()">
+                        <div class="chat-form">
+                            <textarea id="motor_insurance_query_text" placeholder="Please type your message..." ng-keyup="$event.keyCode == 13  && !$event.shiftKey&& ask()" required></textarea>
+                            <button ng-disabled="is_busy">
+                                <i class="fa fa-paper-plane" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </form>
+                  </div>
+                  
+              </div>
+           </div><!--Footer End-->
+        </div><!--Modal Body End-->
+        </div><!--Modal Content End-->
+      </div><!-- Modal Dialog End-->
+   </div>
+<!-- Motor Insurance Modal End-->
+
+
+
+
+        	</div>
+        	<div class="col-sm-1"></div>
+        </div>
+        <!-- Footer -->
+        <!-- <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; Your Website 2014</p>
+                </div>
+            </div>
+        </footer>
+ -->
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+
+	</body>
+</html>
