@@ -27,9 +27,10 @@ app.controller('form_controller', function($http, $scope, $compile) {
 
 	$scope.remove_form = function($index){
 		console.log("Remove " + $index);
-		// $scope.dynamic_forms_counter--;
+		$scope.dynamic_forms_counter--;
 		$scope.dynamic_forms.splice($index, 1);
 		console.log($scope.dynamic_forms);
+		console.log($scope.dynamic_forms_counter);
 	}
 
 	$scope.submit = function(){
